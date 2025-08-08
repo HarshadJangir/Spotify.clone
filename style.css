@@ -1,0 +1,641 @@
+<<<<<<< HEAD
+body{
+    background: #000;
+}
+
+.Navlinks>a:hover{
+ transform: scale(1.1);
+}
+
+.Navbtns>a:hover{
+ transform: scale(1.1);
+}
+
+.bottom{
+    width: 100%;
+    height: 75vh;
+    padding: 5px;
+    background: black;
+    border-radius: 10px;
+}
+
+.PlaylistSongs{
+    height: 80%;
+    width: 100%;
+    /* z-index: 1; */
+    border-radius: 10px;
+    /* background: white; */
+}
+
+.cardContainer img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.cardContainer{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardContainer:hover .HoverPlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.HoverPlay {
+    background: #1ed760;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 19px;
+    bottom: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+    cursor: pointer;
+    box-shadow: inset 0px 1px 5px #006d26;
+}
+
+.playbarCont{
+    height: 15.8vh;
+    width: 100%;
+}
+
+.Ulli li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.Ulli li span{
+    width: 80%;
+}
+
+.playImg{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+.PlaylistSongs::-webkit-scrollbar{
+    width: 10px;
+    height: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+
+.PlaylistSongs::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+
+.maincontainer::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+.maincontainer::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+
+.seekbar{
+    position: relative;
+}
+
+.seekbar:hover{
+    .seekcircle{
+        display: flex;
+        justify-self: flex-start;
+    }
+
+    .progress{
+        background: #1ed760;
+    }
+}
+
+#volumeSlider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #1ed760 100%, #2d2d2d 0%);
+  outline: none;
+  cursor: pointer;
+  transition:  0.3s;
+}
+
+/* Chrome & Edge thumb */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Firefox thumb */
+#volumeSlider::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress{
+    border-radius:10px 0 0 10px ;
+}
+
+@media (max-width: 1100px){
+    .rightnav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .right{
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+}
+
+
+
+
+@media (max-width: 850px) {
+  .playbarCont {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 6px 10px 0 10px;
+    position: relative;
+  }
+
+  .cardContainer{
+    width: 48%;
+  }
+
+  .Info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+
+  .seekControl {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .seekControl .heeh {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .seekbar {
+    width: 100%;
+    height: 6px;
+  }
+
+  .volumeControl{
+    position: absolute;
+    top: 9px;
+    right: -90px;
+  }
+
+  #volumeSlider {
+    width: 80%;
+  }
+
+  .play_pause {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .playbarCont {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 6px 10px 0 10px;
+  }
+
+  .Info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+
+  .seekControl {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .seekControl .heeh {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .seekbar {
+    width: 100%;
+    height: 6px;
+  }
+
+  .volumeControl {
+    display: none;
+  }
+
+  #volumeSlider {
+    width: 80%;
+  }
+
+  .play_pause {
+    margin-bottom: 5px;
+  }
+
+  .top{
+    height: 38px;
+    display: none;
+  }
+
+  .home{
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+  }
+
+  .searchimg{
+    width: 20px;
+    display: flex;
+    align-self: center;
+  }
+
+  .left{
+    width: 80%;
+  }
+  .cardContainer{
+    width: 100%;
+  }
+}
+=======
+body{
+    background: #000;
+}
+
+.Navlinks>a:hover{
+ transform: scale(1.1);
+}
+
+.Navbtns>a:hover{
+ transform: scale(1.1);
+}
+
+.bottom{
+    width: 100%;
+    height: 75vh;
+    padding: 5px;
+    background: black;
+    border-radius: 10px;
+}
+
+.PlaylistSongs{
+    height: 80%;
+    width: 100%;
+    /* z-index: 1; */
+    border-radius: 10px;
+    /* background: white; */
+}
+
+.cardContainer img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.cardContainer{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardContainer:hover .HoverPlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.HoverPlay {
+    background: #1ed760;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 19px;
+    bottom: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+    cursor: pointer;
+    box-shadow: inset 0px 1px 5px #006d26;
+}
+
+.playbarCont{
+    height: 15.8vh;
+    width: 100%;
+}
+
+.Ulli li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.Ulli li span{
+    width: 80%;
+}
+
+.playImg{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+.PlaylistSongs::-webkit-scrollbar{
+    width: 10px;
+    height: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+
+.PlaylistSongs::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+
+.maincontainer::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+.maincontainer::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: #1f1f1f;
+    border-radius: 10px;
+}
+
+.seekbar{
+    position: relative;
+}
+
+.seekbar:hover{
+    .seekcircle{
+        display: flex;
+        justify-self: flex-start;
+    }
+
+    .progress{
+        background: #1ed760;
+    }
+}
+
+#volumeSlider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #1ed760 100%, #2d2d2d 0%);
+  outline: none;
+  cursor: pointer;
+  transition:  0.3s;
+}
+
+/* Chrome & Edge thumb */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Firefox thumb */
+#volumeSlider::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress{
+    border-radius:10px 0 0 10px ;
+}
+
+@media (max-width: 1100px){
+    .rightnav{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .right{
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+}
+
+
+
+
+@media (max-width: 850px) {
+  .playbarCont {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 6px 10px 0 10px;
+    position: relative;
+  }
+
+  .cardContainer{
+    width: 48%;
+  }
+
+  .Info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+
+  .seekControl {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .seekControl .heeh {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .seekbar {
+    width: 100%;
+    height: 6px;
+  }
+
+  .volumeControl{
+    position: absolute;
+    top: 9px;
+    right: -90px;
+  }
+
+  #volumeSlider {
+    width: 80%;
+  }
+
+  .play_pause {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .playbarCont {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+    padding: 6px 10px 0 10px;
+  }
+
+  .Info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+  }
+
+  .seekControl {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .seekControl .heeh {
+    width: 100%;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .seekbar {
+    width: 100%;
+    height: 6px;
+  }
+
+  .volumeControl {
+    display: none;
+  }
+
+  #volumeSlider {
+    width: 80%;
+  }
+
+  .play_pause {
+    margin-bottom: 5px;
+  }
+
+  .top{
+    height: 38px;
+    display: none;
+  }
+
+  .home{
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+  }
+
+  .searchimg{
+    width: 20px;
+    display: flex;
+    align-self: center;
+  }
+
+  .left{
+    width: 80%;
+  }
+  .cardContainer{
+    width: 100%;
+  }
+}
+>>>>>>> 9bfd6a97316f0f2370eba894edd9368929cd39fb
